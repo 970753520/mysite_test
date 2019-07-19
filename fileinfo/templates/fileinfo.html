@@ -1,0 +1,69 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文件下载网站 - WJN测试</title><!--网页标题-->
+	<link type="text/css" rel="stylesheet" href="{% static '/css/table_1.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static '/css/nav.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static '/css/body.css' %}">
+</head>
+<body>
+	<ul class="nav nav-pills">
+		<li role="presentation" class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+				Dropdown <span class="caret"></span>
+			</a>
+		<ul class="dropdown-menu">
+		</ul>
+		</li>
+	</ul>
+	<div class="wrap">
+		<a class="logo" href="">
+			<h3>测试</h3>
+		</a>
+		<a href="">首页</a>
+		<a href="">栏目1</a>
+	</div>
+<!--------------------------主体------------------------>
+	<div class="content"> 
+	<table class="mt">
+	<thead>
+		<tr>
+			<td>序号</td>
+			<td>文件名</td>
+			<td>文件大小</td>
+			<td>文件时间</td>
+			<td>标题</td>
+		</tr>
+	</thead>
+	<tbody>
+	{% for i in model_list %}
+		<!--<li><a href="/movie/{{ i.id }}.html">{{ i.title }}</a></li>-->
+		<tr>
+		<td>{{ i.id }}</td>
+		<td>{{ i.title }}</td>
+		<td>{{ i.content }}</td>
+		<td>{{ i.link }}</td>
+		<td><input type="submit" class="submit" value="123"></td>
+		</tr>
+	{% endfor %}
+	</tbody>
+	</table>
+
+		<a href="/dy/page/list_1.html" class="btn">上一页</a>
+	{% if down_page %}
+		<a href="/dy/page/list_{{ down_page }}.html" class="btn">下一页</a>
+	{% endif %}
+<!--------------------------底部------------------------>
+	<hr class="divider">
+	<footer class="footer">
+		<div class="container">
+			<div class="row col-sm-8 col-center-block">
+				<p class="text-center"><small>Copyright © 2019-∞ [BMW v3.1.0] Supported by 测试-技术后台--基础服务</small></p>
+			</div>
+		</div>
+	</footer>
+	</div>
+</body>
+</html>
