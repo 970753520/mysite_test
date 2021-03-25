@@ -19,7 +19,7 @@ pyttsx3==2.71
 pytz==2019.1
 pywin32==224
 pywin32-ctypes==0.2.0
-PyYAML==5.1
+PyYAML==5.4
 QtAwesome==0.5.7
 QtPy==1.7.1
 serial==0.0.97
