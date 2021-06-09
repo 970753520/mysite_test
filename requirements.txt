@@ -1,6 +1,6 @@
 altgraph==0.16.1
 Click==7.0
-Django==2.2.2
+Django==2.2.22
 Flask==1.0.3
 future==0.17.1
 iso8601==0.1.12
